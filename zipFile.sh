@@ -3,19 +3,12 @@ if [ $# -lt 1 ]; then
     exit 1
 fi
 $a=$1
-$b=$2
-
-if [ -f $a ]; then
-    echo "usage : enter correct file to compress and move"
-    exit 2
-fi
 
 if [ -d $b ];then
     echo "Directory doesnt exist : we create it"
     mkdir -p "$b"
 fi
 
-shift
 shift 
 
 for i in $*
